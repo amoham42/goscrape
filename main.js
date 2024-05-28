@@ -1,6 +1,6 @@
 const { crawl } = require('./crawl.js');
 
-function main() {
+async function main() {
     if (process.argv.length < 3) {
         console.log("input a page to scrape");
         process.exit(1);
@@ -13,7 +13,10 @@ function main() {
 
     const map = process.argv[2];
     console.log("Crawler started!");
-    crawl(map);
+    const pages = await crawl(map, map, {});
+    for (const page of Object.entries(pages)) {
+        console.log(page);
+    }
 }
 
 main();
