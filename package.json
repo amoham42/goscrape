@@ -1,0 +1,18 @@
+{
+  "name": "goscrape",
+  "version": "1.0.0",
+  "description": "Scrapper for google maps",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --no-warnings main.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^24.1.0"
+  }
+}
